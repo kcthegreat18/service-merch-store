@@ -20,6 +20,22 @@
         new Product(null, 299.99, "Product 2"),
         new Product(null, 399.99, "Product 3"),
         new Product(null, 499.99, "Product 4"),
+        new Product(null, 199.99, "Product 5"),
+        new Product(null, 299.99, "Product 6"),
+        new Product(null, 399.99, "Product 7"),
+        new Product(null, 499.99, "Product 8"),
+        new Product(null, 199.99, "Product 9"),
+        new Product(null, 299.99, "Product 10"),
+        new Product(null, 399.99, "Product 11"),
+        new Product(null, 499.99, "Product 12"),
+        new Product(null, 199.99, "Product 13"),
+        new Product(null, 299.99, "Product 14"),
+        new Product(null, 399.99, "Product 15"),
+        new Product(null, 499.99, "Product 16"),
+        new Product(null, 199.99, "Product 17"),
+        new Product(null, 299.99, "Product 18"),
+        new Product(null, 399.99, "Product 19"),
+        new Product(null, 499.99, "Product 20"),
         new Product("/lorem.ipsum", 1, "Product 5")
     ];
 </script>
