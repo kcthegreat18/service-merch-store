@@ -18,10 +18,10 @@
         "Filter 4": false
     });
 
-    let showSortOptions = $state(false);
-    let showNameOptions = $state(false);
-    let showPriceOptions = $state(false);
-    let selectedSort = $state(""); // for backend
+    let showSortOptions = $state<boolean>(false);
+    let showNameOptions = $state<boolean>(false);
+    let showPriceOptions = $state<boolean>(false);
+    let selectedSort = $state<string>(""); // for backend
 
     function handleClickOutside(event: MouseEvent) {
         const sidebar = document.querySelector('.sort-by-container');
