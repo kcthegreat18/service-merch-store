@@ -38,7 +38,7 @@
     <!-- Filter Type 1 -->
     <div class="mb-6">
     <h3 class="sidebar-header filter-type-title mb-2">Filter Type 1</h3>
-    {#each Object.keys(filterType1) as item}
+    {#each Object.keys(filterType1) as  item (item)}
         <label class="block mb-1 sidebar-header filter-item">
             <input type="checkbox" bind:checked={filterType1[item]} class="ml-5 mr-2" />
             {item}
@@ -49,7 +49,7 @@
     <!-- Filter Type 2 -->
     <div class="mb-6">
     <h3 class="sidebar-header filter-type-title mb-2">Filter Type 2</h3>
-    {#each Object.keys(filterType2) as item}
+    {#each Object.keys(filterType2) as item (item)}
         <label class="block mb-1 sidebar-header filter-item">
             <input type="checkbox" bind:checked={filterType2[item]} class="ml-5 mr-2" />
             {item}

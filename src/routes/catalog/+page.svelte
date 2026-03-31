@@ -14,7 +14,7 @@
 	</div>
 
 	<div class="grid grid-cols-4 px-5 mx-5">
-		{#each data.products as product}
+		{#each data.products as product (product.name)}
 			<Card image={product.image} price={product.price} name={product.name} />
 		{/each}
 	</div>
