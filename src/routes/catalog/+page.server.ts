@@ -1,7 +1,9 @@
 import { supabase } from '$lib/supabaseClient';
 
 export async function load() {
-	const { data, error } = await supabase
+	
+	const [ variantResult, categoryResult ] = await Promise.all([
+		supabase
 		.from('Variant')
 		.select(`
 			ImageLink,
@@ -16,16 +18,31 @@ export async function load() {
 			)
 		`)
 		.eq('Active', true)
+		
+		,
+		
+		supabase
+		.from('Category')
+		.select(`id, Category`)
+	])
+	
+	const { data: variantData, error: variantError } = variantResult
+	const { data: categoryData, error: categoryError } = categoryResult
 
 
-	if (error) {
-		console.error('Supabase error:', error);
-		return { products: [] };
+	if (variantError) {
+		console.error('Supabase Variant error:', variantError);
+		return { products: [], categories: [] };
+	}
+
+	if (categoryError) {
+		console.error('Supabase Category error:', categoryError);
+		return { products: [], categories: [] };
 	}
 
 	//console.log('RAW FIRST ROW:', JSON.stringify(data?.[0], null, 2));
 
-	const products = (data ?? []).map((variant) => {
+	const products = (variantData ?? []).map((variant) => {
 		const product = Array.isArray(variant.Products)
 			? variant.Products[0]
 			: variant.Products;
@@ -42,5 +59,10 @@ export async function load() {
 		};
 	});
 
-	return { products };
+	const categories = (categoryData ?? []).map((categ) => ({
+		id: categ.id,
+		category: categ.Category
+	}));
+
+	return { products, categories };
 }
