@@ -114,7 +114,7 @@
 
     <!-- Filter Type 1 -->
     <div class="mb-6">
-        <h3 style="font-family: 'Inter', sans-serif; font-weight: 400; color: #707070; font-size: 16px;" class="mb-2">Filter Type 1</h3>
+        <h3 style="font-family: 'Inter', sans-serif; font-weight: 400; color: #707070; font-size: 16px;" class="mb-2">Categories</h3>
         {#each filterType1 as item (item.id)}
             <label class="block mb-1" style="font-family: 'Inter', sans-serif; font-weight: 400; color: #707070; font-size: 14px;">
                 <input type="checkbox" bind:group={selectedFilters} value={item.category} class="ml-5 mr-2" />
