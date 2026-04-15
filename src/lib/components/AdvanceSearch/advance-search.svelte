@@ -36,7 +36,7 @@
         <h3 style="font-family: 'Inter', sans-serif; font-weight: 400; color: #707070; font-size: 18px;">Sort By</h3>
 
         <div class="relative">
-            <button class="cursor-pointer" onclick={() =>showSortOptions = !showSortOptions} style="color: #707070;">
+            <button class="" onclick={() =>showSortOptions = !showSortOptions} style="color: #707070;">
                 <img src={DownButton} class="w-[24px] h-[36px] align-middle" alt="Button" />
             </button>
 
@@ -47,7 +47,7 @@
                         <!-- Name -->
                         <div class="hover:bg-[#D9D9D9] flex items-center w-[180px] h-[30px]">
                             <span class="pl-2" style="font-family: 'Inter', sans-serif; font-weight: 400; color: #707070; font-size: 14px;">Name</span>
-                            <button class="cursor-pointer ml-auto pr-2" onclick={() => {showNameOptions = !showNameOptions; showPriceOptions = false}} style="color: #707070;">
+                            <button class=" ml-auto pr-2" onclick={() => {showNameOptions = !showNameOptions; showPriceOptions = false}} style="color: #707070;">
                                 <img src={RightButton} class="w-[12px] h-[24px] align-middle" alt="Button" />
                             </button>
                         </div>
@@ -77,7 +77,7 @@
                         <!-- Price -->
                         <div class="hover:bg-[#D9D9D9] flex items-center w-[180px] h-[30px]">
                             <span class="pl-2" style="font-family: 'Inter', sans-serif; font-weight: 400; color: #707070; font-size: 14px;">Price</span>
-                            <button class="cursor-pointer ml-auto pr-2" onclick={() => {showPriceOptions = !showPriceOptions; showNameOptions = false}} style="color: #707070;">
+                            <button class=" ml-auto pr-2" onclick={() => {showPriceOptions = !showPriceOptions; showNameOptions = false}} style="color: #707070;">
                                 <img src={RightButton} class="w-[12px] h-[24px] align-middle" alt="Button" />
                             </button>
                         </div>
